@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* Elegant gothic-inspired fonts with good readability */
     font-family: "Cormorant Garamond", "Georgia", serif;
@@ -12,6 +16,146 @@ body {
     color: #f5f1e8; /* Warm parchment white */
     line-height: 1.7;
     letter-spacing: 0.3px;
+}
+
+/* Navigation Bar - Below Header, Left Aligned */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Position */
+    margin: 20px 0 30px 20px;
+    width: fit-content;
+
+    /* Styling */
+    background: rgba(27, 22, 18, 0.95);
+    border: 1px solid #8b6f47;
+    border-radius: 10px;
+    padding: 12px 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-family: "Cinzel", "Times New Roman", serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d8c3a5;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #f5f1e8;
+    text-shadow: 0 0 8px rgba(216, 195, 165, 0.6);
+}
+/* Navigation Container */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 20px 0 30px 20px;
+    width: fit-content;
+}
+
+/* Remove default details styling */
+.menu {
+    position: relative;
+}
+
+.menu summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+
+    background: rgba(27, 22, 18, 0.95);
+    border: 1px solid #8b6f47;
+    border-radius: 10px;
+    padding: 12px;
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Hamburger lines */
+.menu summary span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #d8c3a5;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Animate into an X when open */
+.menu[open] summary span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu[open] summary span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu[open] summary span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Dropdown menu */
+.menu-dropdown {
+    list-style: none;
+    margin-top: 10px;
+    padding: 8px 0;
+
+    background: rgba(27, 22, 18, 0.98);
+    border: 1px solid #8b6f47;
+    border-radius: 10px;
+    min-width: 180px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Links */
+.menu-dropdown li a {
+    display: block;
+    padding: 12px 18px;
+
+    font-family: "Cinzel", "Times New Roman", serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #d8c3a5;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-dropdown li a:hover {
+    background: #2a221c;
+    color: #f5f1e8;
+}
+
+/* Optional: close menu after selecting by scrolling smoothly */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -53,6 +197,7 @@ section {
     border: 1px solid #8b6f47; /* Antique gold */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
 }
 
 /* Headings */
@@ -88,6 +233,81 @@ footer {
 /* Hover effect */
 section:hover {
     transform: translateY(-5px);
-    transition: 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive: stack nav links vertically on smaller screens */
+@media (max-width: 600px) {
+    nav {
+        top: 10px;
+        left: 10px;
+        padding: 10px 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+/* Collapsible Sections */
+details {
+    margin-bottom: 30px;
+    background: #2a221c; /* Dark walnut */
+    border: 1px solid #8b6f47; /* Antique gold */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Clickable title bar */
+summary {
+    font-family: "Cinzel", "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #d8c3a5;
+    padding: 20px 25px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    border-bottom: 1px solid transparent;
+}
+
+/* Remove default browser arrow */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom + / − indicator */
+summary::after {
+    content: "+";
+    float: right;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #8b6f47;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+/* Content inside expanded section */
+details p {
+    padding: 20px 25px 25px;
+    font-size: 1.05rem;
+    color: #f5f1e8;
 }
