@@ -6,29 +6,39 @@
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: darkslategray;
-    color: #e2e8f0;
-    line-height: 1.6;
+    /* Elegant gothic-inspired fonts with good readability */
+    font-family: "Cormorant Garamond", "Georgia", serif;
+    background-color: #0f0d0b; /* Deep charcoal brown */
+    color: #f5f1e8; /* Warm parchment white */
+    line-height: 1.7;
+    letter-spacing: 0.3px;
 }
 
 /* Header */
 header {
-    background: floralwhite;
-    padding: 20px;
+    background: #1b1612; /* Rich dark espresso */
+    padding: 30px 20px;
     text-align: center;
+    border-bottom: 2px solid #8b6f47; /* Antique gold */
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-family: "Cinzel", "Times New Roman", serif; /* Gothic-inspired */
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d8c3a5; /* Soft aged gold */
 }
 
 header p {
-    color: cadetblue;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #cbb89d; /* Muted beige */
+    margin-top: 8px;
 }
 
 /* Main layout */
-
 main {
     padding: 20px;
     max-width: 800px;
@@ -37,29 +47,47 @@ main {
 
 /* Sections */
 section {
-     margin-bottom: 30px;
-    padding: 20px;
-    background: #1e293b;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #2a221c; /* Dark walnut */
+    border: 1px solid #8b6f47; /* Antique gold */
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Headings */
 h2 {
-    margin-bottom: 10px;
-    color: #38bdf8;
+    font-family: "Cinzel", "Times New Roman", serif;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #d8c3a5; /* Warm gold */
+    border-bottom: 1px solid #8b6f47;
+    padding-bottom: 6px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.05rem;
+    color: #f5f1e8;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background: #1e293b;
+    background: #1b1612; /* Dark espresso */
+    border-top: 2px solid #8b6f47;
     margin-top: 20px;
-    font-size: 0.9rem;
-    color: #94a3b8;
+    font-size: 0.95rem;
+    color: #cbb89d;
+    font-style: italic;
 }
 
+/* Hover effect */
 section:hover {
     transform: translateY(-5px);
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
